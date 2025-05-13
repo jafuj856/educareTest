@@ -1,0 +1,48 @@
+<header class="w-full mt-[80px]">
+  <div class="bg-[#7B2431] flex items-center justify-between px-4 md:px-10 h-[74px] text-white font-sans w-full transition-all duration-1000 fixed top-0 z-50">
+    <h1 class="logo flex items-center gap-2 font-grotesque text-xl">
+      <svg width="30" height="30" fill="white" viewBox="0 0 36 36"><path d="M18 0C14.4399..."/></svg>
+      Educare
+    </h1>
+
+    <!-- Desktop Nav -->
+    <nav class="md:flex hidden">
+      <ul class="flex gap-6 text-[18px]">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Info Desktop -->
+    <div class="md:flex hidden items-center gap-6 text-sm">
+      <div>
+        <div class="flex items-center gap-2"><i class="bi bi-telephone-fill"></i> +974 55555 3456</div>
+        <div class="flex items-center gap-2"><i class="bi bi-envelope-fill"></i> info@educare.qa</div>
+      </div>
+      <button class="bg-white p-1.5 px-4 rounded-md text-[16px] text-[#7B2431]">Contact Us</button>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <button onclick="openMenu()" id="menuBtn" class="w-10 h-10 border border-white rounded-md p-1 flex flex-col gap-1.5 items-center justify-center cursor-pointer md:hidden">
+      <div class="w-full h-1 rounded-full bg-white"></div>
+      <div class="w-full h-1 rounded-full bg-white"></div>
+      <div class="w-full h-1 rounded-full bg-white"></div>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden fixed top-[74px] left-0 w-full bg-[#7B2431] text-white text-center p-6 space-y-4 hidden z-40">
+    <a href="#" class="block text-lg">About us</a>
+    <a href="#" class="block text-lg">Courses</a>
+    <a href="#" class="block text-lg">About</a>
+    <a href="#" class="block text-lg">Contact</a>
+    <hr class="border-white opacity-30 my-2">
+    <div class="text-sm">
+      <div class="flex justify-center gap-2"><i class="bi bi-telephone-fill"></i> +974 55555 3456</div>
+      <div class="flex justify-center gap-2"><i class="bi bi-envelope-fill"></i> info@educare.qa</div>
+    </div>
+    <button class="bg-white text-[#7B2431] mt-4 px-6 py-2 rounded-md text-base">Contact Us</button>
+  </div>
+</header>

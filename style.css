@@ -1,0 +1,52 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+
+  box-shadow: 0px 5px 10px 0px #0000001A;
+
+}
+
+.logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* scollImage Section */
+#scroller-container {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#scroller {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: transform 0.2s linear;
+}
+
+.scroll-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+/* heading banner */
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
