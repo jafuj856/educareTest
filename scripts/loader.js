@@ -23,32 +23,23 @@ window.onload = () => {
       });
   });
 };
-// heder open
-function openMenu() {
-   
-    const mobileMenu = document.getElementById("mobileMenu");
 
-if(!mobileMenu) return
-      mobileMenu.classList.toggle("hidden");
-  
+let isOpen = false;
+
+function drpDown() {
+  const dropDown = document.getElementById("dropElement");
+
+  if (!isOpen) {
+    dropDown.classList.remove("hidden");
+  } else {
+    dropDown.classList.add("hidden");
+  }
+
+  isOpen = !isOpen;
 }
-// dropDown
- let isOpen = false;
-
- function drpDown() {
-   const dropDown = document.getElementById("dropElement");
-
-   if (!isOpen) {
-     dropDown.classList.remove("hidden");
-   } else {
-     dropDown.classList.add("hidden");
-   }
-
-   isOpen = !isOpen;
- }
 // Show the hoverdShow section with dynamic content
 function showHoverdSection(section) {
-  const hoverdShow = document.getElementById('hoverdShow');
+  const hoverdShow = document.getElementById("hoverdShow");
   const labels = [
     "Math",
     "Physics",
@@ -76,10 +67,8 @@ function showHoverdSection(section) {
     `;
   });
 
-
   hoverdShow.innerHTML = html;
- section === "section1" ? hoverdShow.classList.remove("hidden") : "";
-
+  section === "section1" ? hoverdShow.classList.remove("hidden") : "";
 }
 // Hide the hoverdShow section when not hovering
 function hideHoverdSection() {
@@ -87,7 +76,7 @@ function hideHoverdSection() {
   hoverdShow.classList.add("hidden");
 }
 
- let faqOpen = false;
+let faqOpen = false;
 
 function toggleFaq(id) {
   const totalFaqs = 4; // update this if you have more
@@ -112,9 +101,8 @@ function toggleFaq(id) {
   }
 }
 
-
-  // On page load, collapse all answers
-  window.addEventListener("DOMContentLoaded", () => {
-    const allAnswers = document.querySelectorAll("[id^='faq-answer']");
-    allAnswers.forEach((el) => (el.style.maxHeight = "0px"));
-  });
+// On page load, collapse all answers
+window.addEventListener("DOMContentLoaded", () => {
+  const allAnswers = document.querySelectorAll("[id^='faq-answer']");
+  allAnswers.forEach((el) => (el.style.maxHeight = "0px"));
+});
